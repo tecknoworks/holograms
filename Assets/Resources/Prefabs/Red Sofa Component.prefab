@@ -551,6 +551,11 @@ PrefabInstance:
       propertyPath: boundingBox
       value: 
       objectReference: {fileID: 7522197151849198205}
+    - target: {fileID: 4553492072223634895, guid: 8b05ea7c3b9e07f45ae377cda274c08f,
+        type: 3}
+      propertyPath: hoverOffsetYScale
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3706187629359875344, guid: 8b05ea7c3b9e07f45ae377cda274c08f,
         type: 3}
       propertyPath: gameObject

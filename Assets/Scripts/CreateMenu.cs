@@ -17,10 +17,18 @@ public class CreateMenu : MonoBehaviour
     {
         prefabs = Resources.LoadAll<GameObject>("Prefabs");
         materials = Resources.LoadAll<Material>("Materials");
-
-
-            foreach (GameObject prefab in prefabs)
+        
+        int i = 0;
+        var length = prefabs.Length;
+        foreach (GameObject prefab in prefabs)
         {
+            if(3 - (length % 3) == 2 && i == (length / 3 + 1) * 2 - 1)
+            {
+                GameObject newButtonSup = Instantiate(button, Vector3.zero, Quaternion.identity) as GameObject;
+                newButtonSup.transform.parent = collection.transform;
+                Destroy(newButtonSup.GetComponent<AddAnObject>());
+            }
+
             GameObject newButton = Instantiate(button, Vector3.zero, Quaternion.identity) as GameObject;
 
             AddAnObject script = newButton.GetComponent<AddAnObject>();
@@ -30,24 +38,18 @@ public class CreateMenu : MonoBehaviour
             buttonMaterial.material = Array.Find(materials, m => m.name == prefab.name);
 
             newButton.transform.parent = collection.transform;
+            i++;
         }
 
-        var length = prefabs.Length;
+        
         GridObjectCollection col = collection.GetComponent<GridObjectCollection>();
-
-        //if (length != 1 && length != 0)
-        //    col.Rows = (int)Math.Log(length, 2);
-        //else
-        //    col.Rows = 1;
 
         if ( length % 3 != 0 )
         {
-            for(int i = 1; i <= 3 - length % 3; i++)
-            {
-                GameObject newButton = Instantiate(button, Vector3.zero, Quaternion.identity) as GameObject;             
-                newButton.transform.parent = collection.transform;
-                Destroy(newButton.GetComponent<AddAnObject>());
-            }
+            GameObject newButtonS = Instantiate(button, Vector3.zero, Quaternion.identity) as GameObject;             
+            newButtonS.transform.parent = collection.transform;
+            Destroy(newButtonS.GetComponent<AddAnObject>());
+
             col.Rows = length / 3 + 1;
         }
         else

@@ -98,7 +98,7 @@ public class ButtonsScriptGroup : MonoBehaviour
             rb.isKinematic = kinematic;
             gravityButton.GetComponentInChildren<TextMeshPro>().SetText("Gravity" + "\n" + "Turn on");
             gameObject.transform.eulerAngles = new Vector3(x, y, z);
-            gameObject.transform.localScale += new Vector3(1f, 1f, 1f);
+            gameObject.transform.localScale = Vector3.one;
             foreach (Transform child in gameObject.transform)
             {
                 child.transform.eulerAngles = childsRotation[child.name];

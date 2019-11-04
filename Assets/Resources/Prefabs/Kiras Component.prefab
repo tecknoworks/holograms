@@ -1445,8 +1445,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5155969, y: 1.3451962, z: 2.2317667}
-  m_Center: {x: -0.049248874, y: 0.5261831, z: -0.39775658}
+  m_Size: {x: 2.347673, y: 1.1249931, z: 2.1763}
+  m_Center: {x: -0.1332109, y: 0.4631735, z: -0.4254899}
 --- !u!82 &8990092485461439658
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2496,6 +2496,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4512879569495257131, guid: 8b05ea7c3b9e07f45ae377cda274c08f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4518383495402829399, guid: 8b05ea7c3b9e07f45ae377cda274c08f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2556,6 +2561,11 @@ PrefabInstance:
       propertyPath: boundingBox
       value: 
       objectReference: {fileID: 9174213896170637048}
+    - target: {fileID: 4553492072223634895, guid: 8b05ea7c3b9e07f45ae377cda274c08f,
+        type: 3}
+      propertyPath: hoverOffsetYScale
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3706187629359875344, guid: 8b05ea7c3b9e07f45ae377cda274c08f,
         type: 3}
       propertyPath: gameObject
